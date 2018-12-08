@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link, graphql} from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 import Img from "gatsby-image";
 
-export default class IndexPage extends React.Component {
+export default class PaintingsIndexPage extends React.Component {
     render() {
         const {data} = this.props
         const {edges: posts} = data.allMarkdownRemark
@@ -38,7 +38,7 @@ export default class IndexPage extends React.Component {
     }
 }
 
-IndexPage.propTypes = {
+PaintingsIndexPage.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,
@@ -47,8 +47,12 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-query IndexQuery {
-  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "artwork-post"}}}, limit: 1) {
+query PaintingsIndexQuery {
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {
+      frontmatter: {
+        templateKey: {eq: "artwork-post"}, category: {eq: "Paintings"}
+      }
+    }) {
     edges {
       node {
         id
