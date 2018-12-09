@@ -1,21 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+// eslint-disable-next-line
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import WorkList from "../../components/WorkList";
 
-import IndexPage from '../index'
-
-export default class PaintingsIndexPage extends IndexPage {
+export default class PaintingsIndexPage extends WorkList {
   // noinspection JSUnusedGlobalSymbols
-  showOutline = true
+  showOutline = true;
 }
 
 PaintingsIndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+      edges: PropTypes.array
+    })
+  })
+};
 
 export const pageQuery = graphql`
   query PaintingsIndexQuery {
@@ -53,4 +53,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
