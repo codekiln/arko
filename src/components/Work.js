@@ -6,7 +6,6 @@ import WorkDetails from './WorkDetails'
 
 const Work = ({ post, showOutline = true }) => {
   const topLevelClass = 'content work' + (showOutline ? ' box' : '')
-  console.log('in work, post is ', post, ' and show outline is: ', showOutline)
   return (
     <div className={topLevelClass} style={{ 'max-width': 561 }} key={post.id}>
       <Link className="has-text-primary" to={post.fields.slug}>
@@ -15,7 +14,7 @@ const Work = ({ post, showOutline = true }) => {
           alt={post.frontmatter.title}
         />
       </Link>
-      {WorkDetails(post, post.fields.slug)}
+      <WorkDetails attrs={post} link={post.fields.slug} />
     </div>
   )
 }

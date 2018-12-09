@@ -18,19 +18,25 @@ const getDetail = (attrName, attrValue, link) => {
   )
 }
 
-const WorkDetails = (attrs, link) => {
+const WorkDetails = ({ attrs, link, isDetail = false }) => {
   const attrs2 = attrs.hasOwnProperty('frontmatter') ? attrs.frontmatter : attrs
   const formatDetail = key =>
     attrs2.hasOwnProperty(key) ? getDetail(key, attrs2[key], link) : null
   const orderedAttrs = ['title', 'date', 'medium', 'dimension'].map(
     formatDetail
   )
-  return <div className="work-details">{orderedAttrs}</div>
+  return (
+    <div className="work-details">
+      {orderedAttrs}
+      {isDetail && getDetail('isDetail', '(Detail)')}
+    </div>
+  )
 }
 
 WorkDetails.propTypes = {
   attrs: PropTypes.object,
   link: PropTypes.string,
+  isDetail: PropTypes.bool,
 }
 
 export default WorkDetails

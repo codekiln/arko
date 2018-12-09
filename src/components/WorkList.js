@@ -1,15 +1,31 @@
-// eslint-disable-next-line
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import WorkList from '../../components/WorkList'
+import Layout from '../components/Layout'
+import Work from '../components/Work'
 
-export default class DrawingsIndexPage extends WorkList {
-  // noinspection JSUnusedGlobalSymbols
-  showOutline = true
+export default class WorkList extends React.Component {
+  showOutline = false
+
+  render() {
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
+
+    return (
+      <Layout>
+        <section className="section">
+          <div className="container">
+            {posts.map(({ node: post }) => (
+              <Work post={post} showOutline={this.showOutline} />
+            ))}
+          </div>
+        </section>
+      </Layout>
+    )
+  }
 }
 
-DrawingsIndexPage.propTypes = {
+WorkList.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -18,15 +34,11 @@ DrawingsIndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query DrawingsIndexQuery {
+  query WorkListQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: {
-        frontmatter: {
-          templateKey: { eq: "artwork-post" }
-          category: { eq: "Drawings" }
-        }
-      }
+      filter: { frontmatter: { templateKey: { eq: "artwork-post" } } }
+      limit: 1
     ) {
       edges {
         node {
