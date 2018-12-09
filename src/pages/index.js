@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Work from '../components/Work'
+import WorkDetails from '../components/WorkDetails'
 
 export default class IndexPage extends React.Component {
   showOutline = false
@@ -16,7 +16,24 @@ export default class IndexPage extends React.Component {
         <section className="section">
           <div className="container">
             {posts.map(({ node: post }) => (
-              <Work post={post} showOutline={this.showOutline} />
+              <div key={post.id}>
+                <div
+                  className="full-width-image-container"
+                  style={{
+                    backgroundImage: `url(${
+                      post.frontmatter.frontispiece.childImageSharp
+                        ? post.frontmatter.frontispiece.childImageSharp.fluid
+                            .src
+                        : post.frontmatter.frontispiece
+                    })`,
+                  }}
+                />
+                <WorkDetails
+                  attrs={post}
+                  link={post.fields.slug}
+                  isDetail={true}
+                />
+              </div>
             ))}
           </div>
         </section>
@@ -60,6 +77,14 @@ export const pageQuery = graphql`
             medium
             category
             dimension
+            frontispiece {
+              id
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
