@@ -16,7 +16,6 @@ export default class IndexPage extends React.Component {
         <div className="columns is-centered">
           <div className="column is-two-fifths">
             <section className="section">
-
               {posts.map(({ node: post }) => (
                 <div key={post.id} style={{ margin: 'auto' }}>
                   <div
@@ -37,7 +36,6 @@ export default class IndexPage extends React.Component {
                   />
                 </div>
               ))}
-
             </section>
           </div>
         </div>
