@@ -55,13 +55,13 @@ const Navbar = class extends React.Component {
                 Drawings
               </Link>
               {/*<Link className="navbar-item" to="/contact">*/}
-                {/*Contact*/}
+              {/*Contact*/}
               {/*</Link>*/}
               {/*<Link className="navbar-item" to="/contact/examples">*/}
-                {/*Form Examples*/}
+              {/*Form Examples*/}
               {/*</Link>*/}
             </div>
-              <div className="navbar-end has-text-centered"/>
+            <div className="navbar-end has-text-centered" />
           </div>
         </div>
       </nav>
