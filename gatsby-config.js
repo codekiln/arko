@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Arhia Kohlmoos',
-    description:
-      'Artwork of Arhia Kohlmoos',
+    description: 'Artwork of Arhia Kohlmoos',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

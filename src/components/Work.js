@@ -5,9 +5,13 @@ import Img from 'gatsby-image'
 import WorkDetails from './WorkDetails'
 
 const Work = ({ post, showOutline = true }) => {
-  const topLevelClass = 'content work' + (showOutline ? ' box' : '')
+  const topLevelClass = 'work' + (showOutline ? ' box' : '')
   return (
-    <div className={topLevelClass} style={{ 'max-width': 561 }} key={post.id}>
+    <div
+      className={topLevelClass}
+      style={{ 'max-width': 561, margin: 'auto' }}
+      key={post.id}
+    >
       <Link className="has-text-primary" to={post.fields.slug}>
         <Img
           fluid={post.frontmatter.image.childImageSharp.fluid}
