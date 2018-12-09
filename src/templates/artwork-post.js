@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Img from 'gatsby-image'
@@ -16,6 +15,7 @@ export const ArtworkPostTemplate = ({
   title,
   date,
   medium,
+  slug,
   dimension,
   helmet,
 }) => {
@@ -32,7 +32,7 @@ export const ArtworkPostTemplate = ({
               alt={title}
               style={{ 'max-width': 561 }}
             />
-            {WorkDetails({ title, date, medium, dimension })}
+            {WorkDetails({ title, date, medium, dimension }, slug)}
             <PostContent content={content} />
           </div>
         </div>
@@ -50,6 +50,7 @@ ArtworkPostTemplate.propTypes = {
   date: PropTypes.string,
   medium: PropTypes.string,
   dimension: PropTypes.string,
+  slug: PropTypes.string,
   helmet: PropTypes.object,
 }
 
@@ -63,7 +64,7 @@ const ArtworkPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
@@ -76,6 +77,7 @@ const ArtworkPost = ({ data }) => {
         date={post.frontmatter.date}
         medium={post.frontmatter.medium}
         dimension={post.frontmatter.dimension}
+        slug={post.fields.slug}
       />
     </Layout>
   )

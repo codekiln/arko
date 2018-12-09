@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Img from 'gatsby-image'
+import Work from '../components/Work'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -13,27 +13,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-            {posts.map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ 'max-width': 561 }}
-                key={post.id}
-              >
-                <Link className="has-text-primary" to={post.fields.slug}>
-                  <Img
-                    fluid={post.frontmatter.image.childImageSharp.fluid}
-                    alt={post.title}
-                  />
-                </Link>
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-              </div>
-            ))}
+            {posts.map(({ node: post }) => Work(post))}
           </div>
         </section>
       </Layout>
@@ -75,6 +55,7 @@ export const pageQuery = graphql`
             }
             medium
             category
+            dimension
           }
         }
       }
