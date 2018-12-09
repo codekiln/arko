@@ -3,82 +3,25 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
-import Img from 'gatsby-image'
-import WorkDetails from '../components/WorkDetails'
-
-export const ArtworkPostTemplate = ({
-  content,
-  image,
-  contentComponent,
-  description,
-  title,
-  date,
-  medium,
-  slug,
-  dimension,
-  helmet,
-}) => {
-  const PostContent = contentComponent || Content
-
-  return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <Img
-              fluid={image.childImageSharp.fluid}
-              alt={title}
-              style={{ 'max-width': 561 }}
-            />
-            {WorkDetails({ title, date, medium, dimension }, slug)}
-            <PostContent content={content} />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-ArtworkPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  image: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  date: PropTypes.string,
-  medium: PropTypes.string,
-  dimension: PropTypes.string,
-  slug: PropTypes.string,
-  helmet: PropTypes.object,
-}
+import Work from '../components/Work'
 
 const ArtworkPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <ArtworkPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        image={post.frontmatter.image}
-        title={post.frontmatter.title}
-        date={post.frontmatter.date}
-        medium={post.frontmatter.medium}
-        dimension={post.frontmatter.dimension}
-        slug={post.fields.slug}
-      />
+      <section className="section">
+        <Helmet titleTemplate="%s">
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta
+            name="description"
+            content={`${post.frontmatter.description}`}
+          />
+        </Helmet>
+        <div className="container">
+          <Work post={post} showOutline={false} />
+        </div>
+      </section>
     </Layout>
   )
 }

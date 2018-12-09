@@ -1,44 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Layout from '../../components/Layout'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
+import IndexPage from '../index'
 
-export default class DrawingsIndexPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-
-    return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            {posts.map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ 'max-width': 561 }}
-                key={post.id}
-              >
-                <Link className="has-text-primary" to={post.fields.slug}>
-                  <Img
-                    fluid={post.frontmatter.image.childImageSharp.fluid}
-                    alt={post.title}
-                  />
-                </Link>
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-      </Layout>
-    )
-  }
+export default class DrawingsIndexPage extends IndexPage {
+  // noinspection JSUnusedGlobalSymbols
+  showOutline = true
 }
 
 DrawingsIndexPage.propTypes = {
@@ -79,6 +46,7 @@ export const pageQuery = graphql`
             }
             medium
             category
+            dimension
           }
         }
       }

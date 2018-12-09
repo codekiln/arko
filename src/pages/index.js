@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Work from '../components/Work'
 
 export default class IndexPage extends React.Component {
+  showOutline = false
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -13,7 +15,9 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-            {posts.map(({ node: post }) => Work(post))}
+            {posts.map(({ node: post }) => (
+              <Work post={post} showOutline={this.showOutline} />
+            ))}
           </div>
         </section>
       </Layout>
