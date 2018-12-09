@@ -13,30 +13,32 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            {posts.map(({ node: post }) => (
-              <div key={post.id}>
-                <div
-                  className="full-width-image-container"
-                  style={{
-                    backgroundImage: `url(${
-                      post.frontmatter.frontispiece.childImageSharp
-                        ? post.frontmatter.frontispiece.childImageSharp.fluid
-                            .src
-                        : post.frontmatter.frontispiece
-                    })`,
-                  }}
-                />
-                <WorkDetails
-                  attrs={post}
-                  link={post.fields.slug}
-                  isDetail={true}
-                />
-              </div>
-            ))}
+        <div className="columns is-centered">
+          <div className="column is-two-fifths">
+            <section className="section">
+              {posts.map(({ node: post }) => (
+                <div key={post.id} style={{ margin: 'auto' }}>
+                  <div
+                    className="full-width-image-container"
+                    style={{
+                      backgroundImage: `url(${
+                        post.frontmatter.frontispiece.childImageSharp
+                          ? post.frontmatter.frontispiece.childImageSharp.fluid
+                              .src
+                          : post.frontmatter.frontispiece
+                      })`,
+                    }}
+                  />
+                  <WorkDetails
+                    attrs={post}
+                    link={post.fields.slug}
+                    isDetail={true}
+                  />
+                </div>
+              ))}
+            </section>
           </div>
-        </section>
+        </div>
       </Layout>
     )
   }

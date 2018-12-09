@@ -14,11 +14,13 @@ export default class WorkList extends React.Component {
     return (
       <Layout>
         <section className="section">
-          <div className="container">
-            {posts.map(({ node: post }) => (
-              <Work post={post} showOutline={this.showOutline} />
-            ))}
-          </div>
+          {posts.map(({ node: post }) => (
+            <div className="columns is-centered">
+              <div className="column is-three-fifths">
+                <Work post={post} showOutline={this.showOutline} />
+              </div>
+            </div>
+          ))}
         </section>
       </Layout>
     )
