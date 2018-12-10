@@ -36,6 +36,7 @@ Work.propTypes = {
       }),
       dimension: PropTypes.string.isRequired,
       medium: PropTypes.string.isRequired,
+      buylink: PropTypes.string,
     }),
   }),
   showOutline: PropTypes.bool,

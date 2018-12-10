@@ -63,6 +63,8 @@ const Navbar = class extends React.Component {
                 </Link>
                 <a
                   className="navbar-item"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="http://society6.com/ArhiaKohlmoos"
                 >
                   Prints
