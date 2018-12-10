@@ -11,7 +11,7 @@ const ArtworkPost = ({ data }) => {
   return (
     <Layout>
       <section className="section">
-        <Helmet titleTemplate="%s">
+        <Helmet titleTemplate="Arhia Kohlmoos | %s">
           <title>{`${post.frontmatter.title}`}</title>
           <meta
             name="description"
