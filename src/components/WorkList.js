@@ -62,6 +62,7 @@ export const pageQuery = graphql`
             medium
             category
             dimension
+            buylink
           }
         }
       }
