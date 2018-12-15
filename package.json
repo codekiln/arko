@@ -3,6 +3,7 @@
   "description": "Gatsby + Netlify CMS project",
   "version": "0.0.1",
   "author": "Myer Nore",
+  "repository": "https://github.com/codekiln/arko",
   "dependencies": {
     "bulma": "^0.7.0",
     "gatsby": "^2.0.0",
@@ -11,9 +12,9 @@
     "gatsby-plugin-netlify-cms": "^3.0.0",
     "gatsby-plugin-purgecss": "^2.4.0",
     "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-remark-copy-linked-files": "^2.0.6",
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-plugin-sharp": "^2.0.5",
+    "gatsby-remark-copy-linked-files": "^2.0.6",
     "gatsby-remark-images": "^3.0.0",
     "gatsby-remark-relative-images": "^0.2.0",
     "gatsby-source-filesystem": "^2.0.1",
@@ -27,6 +28,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
+    "react-google-recaptcha": "^1.0.5",
     "react-helmet": "^5.2.0",
     "uuid": "^3.2.1"
   },
