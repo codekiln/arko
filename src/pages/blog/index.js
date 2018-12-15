@@ -25,7 +25,9 @@ export default class IndexPage extends React.Component {
                     </h2>
                     <small>{post.frontmatter.date}</small>
                     <span> &bull; </span>
-                    <small><em>{post.frontmatter.description}</em></small>
+                    <small>
+                      <em>{post.frontmatter.description}</em>
+                    </small>
                   </div>
                   <hr />
 
