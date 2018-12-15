@@ -7,5 +7,6 @@ buylink: >-
 date: 2013-01-01T05:00:00.000Z
 medium: Graphite on paper
 dimension: 12x9 inches
+category: Drawings
 ---
 
