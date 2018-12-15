@@ -7,10 +7,10 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-- name: "works"
-  label: "Works"
-  label_singular: "Work"
-  folder: "src/pages/works"
+- name: "paintings"
+  label: "Paintings"
+  label_singular: "Painting"
+  folder: "src/pages/paintings"
   create: true
   delete: true
   slug: "{{slug}}"
@@ -23,7 +23,26 @@ collections:
     - {label: "Date", name: "date", widget: "date"}
     - {label: "Medium", name: "medium", widget: "text"}
     - {label: "Dimension", name: "dimension", widget: "text"}
-    - {label: "Category", name: "category", widget: "select", options: ['Paintings', 'Drawings', 'Misc']}
+    - {label: "Category", name: "category", widget: "hidden", default: 'Paintings'}
+    - {label: "Description", name: "description", widget: "markdown", required: false}
+
+- name: "drawings"
+  label: "Drawings"
+  label_singular: "Drawing"
+  folder: "src/pages/drawings"
+  create: true
+  delete: true
+  slug: "{{slug}}"
+  fields:
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "artwork-post"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Image", name: "image", widget: "image", media_library: { config: { multiple: false } } }
+    - {label: "Frontispiece", name: "frontispiece", required: false, widget: "image", media_library: { config: { multiple: false } } }
+    - {label: "Buy Link", name: "buylink", widget: "string"}
+    - {label: "Date", name: "date", widget: "date"}
+    - {label: "Medium", name: "medium", widget: "text"}
+    - {label: "Dimension", name: "dimension", widget: "text"}
+    - {label: "Category", name: "category", widget: "hidden", options: 'Drawings'}
     - {label: "Description", name: "description", widget: "markdown", required: false}
 
 - name: "blog"
