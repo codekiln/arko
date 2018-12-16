@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+display_url: https://arhiakohlmoos.com
+logo_url: /img/arko_logo.jpg
 publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
@@ -18,7 +20,7 @@ collections:
     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "artwork-post"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Image", name: "image", widget: "image", media_library: { config: { multiple: false } } }
-    - {label: "Frontispiece", name: "frontispiece", required: false, widget: "image", media_library: { config: { multiple: false } } }
+    - {label: "Frontispiece (1916px wide)", name: "frontispiece", required: false, widget: "image", media_library: { config: { multiple: false } } }
     - {label: "Buy Link", name: "buylink", widget: "string"}
     - {label: "Date", name: "date", widget: "date"}
     - {label: "Medium", name: "medium", widget: "text"}
@@ -37,7 +39,7 @@ collections:
     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "artwork-post"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Image", name: "image", widget: "image", media_library: { config: { multiple: false } } }
-    - {label: "Frontispiece", name: "frontispiece", required: false, widget: "image", media_library: { config: { multiple: false } } }
+    - {label: "Frontispiece (1916px wide)", name: "frontispiece", required: false, widget: "image", media_library: { config: { multiple: false } } }
     - {label: "Buy Link", name: "buylink", widget: "string"}
     - {label: "Date", name: "date", widget: "date"}
     - {label: "Medium", name: "medium", widget: "text"}

@@ -1,7 +1,7 @@
 {
   "name": "arko",
-  "description": "Gatsby + Netlify CMS project",
-  "version": "0.0.1",
+  "description": "Website for Arhia Kohlmoos (https://arhiakohlmoos.com)",
+  "version": "1.0.0",
   "author": "Myer Nore",
   "repository": "https://github.com/codekiln/arko",
   "dependencies": {
