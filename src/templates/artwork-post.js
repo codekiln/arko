@@ -23,6 +23,7 @@ const ArtworkPost = ({ data }) => {
             property="og:image"
             content={post.frontmatter.image.childImageSharp.fluid.src}
           />
+          {post.frontmatter.buylink && <meta property="product:availability" content="Prints Available" />}
         </Helmet>
         <div className="container">
           <Work post={post} showOutline={false} />
