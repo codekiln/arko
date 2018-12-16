@@ -9,7 +9,7 @@ const Work = ({ post, showOutline = true }) => {
   return (
     <div
       className={topLevelClass}
-      style={{ 'max-width': 561, margin: 'auto' }}
+      style={{ maxWidth: 561, margin: 'auto' }}
       key={post.id}
     >
       <Link className="has-text-primary" to={post.fields.slug}>

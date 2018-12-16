@@ -7,16 +7,23 @@ import Work from '../components/Work'
 
 const ArtworkPost = ({ data }) => {
   const { markdownRemark: post } = data
+  const desc = `${post.frontmatter.medium}, by Arhia Kohlmoos (${post.frontmatter.date})`
+  const title = `${post.frontmatter.title})`
 
   return (
     <Layout>
       <section className="section">
-        <Helmet titleTemplate="Arhia Kohlmoos | %s">
-          <title>{`${post.frontmatter.title}`}</title>
+        <Helmet titleTemplate="%s | Arhia Kohlmoos">
+          <title>{title}</title>
+          <meta name="description" content={desc} />
+          <meta property="og:title" content={title} />
+          <meta property="og:type" content="product.item" />
+          <meta property="og:description" content={desc} />
           <meta
-            name="description"
-            content={`${post.frontmatter.description}`}
+            property="og:image"
+            content={post.frontmatter.image.childImageSharp.fluid.src}
           />
+          {post.frontmatter.buylink && <meta property="product:availability" content="Prints Available" />}
         </Helmet>
         <div className="container">
           <Work post={post} showOutline={false} />

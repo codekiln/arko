@@ -15,7 +15,7 @@ export default class WorkList extends React.Component {
       <Layout>
         <section className="section">
           {posts.map(({ node: post }) => (
-            <div className="columns is-centered">
+            <div key={post.id} className="columns is-centered">
               <div className="column is-three-fifths">
                 <Work post={post} showOutline={this.showOutline} />
               </div>
