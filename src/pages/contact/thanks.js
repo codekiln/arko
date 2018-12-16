@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export default () => (
   <Layout>
@@ -10,13 +11,13 @@ export default () => (
             <h1>Thank you!</h1>
             <p>
               For more information, please also see my{' '}
-              <a
+              <OutboundLink
                 href="https://www.facebook.com/ArhiaKohlmoosArt"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Facebook Artist Page
-              </a>
+              </OutboundLink>
               .
             </p>
           </div>

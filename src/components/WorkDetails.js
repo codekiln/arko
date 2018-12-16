@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const getDetail = (attrName, attrValue, link) => {
   if (!attrValue) return null
@@ -15,7 +16,7 @@ const getDetail = (attrName, attrValue, link) => {
       {attrValue}
     </Link>
   ) : attrName === 'buylink' ? (
-    <a
+    <OutboundLink
       key={keyAndClass}
       className={classWithBulmaStyle}
       href={attrValue}
@@ -23,7 +24,7 @@ const getDetail = (attrName, attrValue, link) => {
       rel="noopener noreferrer"
     >
       Purchase Print
-    </a>
+    </OutboundLink>
   ) : (
     <p key={keyAndClass} className={classWithBulmaStyle}>
       {attrValue}

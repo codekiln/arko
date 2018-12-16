@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/logo.svg'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Navbar = class extends React.Component {
   componentDidMount() {
@@ -68,14 +69,14 @@ const Navbar = class extends React.Component {
                 <Link className="navbar-item" to="/contact">
                   Contact
                 </Link>
-                <a
+                <OutboundLink
                   className="navbar-item"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="http://society6.com/ArhiaKohlmoos"
                 >
                   Prints
-                </a>
+                </OutboundLink>
               </div>
               <div className="navbar-end has-text-centered" />
             </div>
