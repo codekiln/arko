@@ -30,10 +30,16 @@ const TemplateWrapper = ({ children }) => (
 
           <meta name="theme-color" content="#fff" />
 
-          <meta property="og:type" content="business.business" />
+          <meta property="og:type" content="profile" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
-          <meta property="og:description" content={data.site.siteMetadata.description} />
-          <meta property="og:url" content="/img/woman_hero_social_media_shareimage_1200_628.jpg" />
+          <meta
+            property="og:description"
+            content={data.site.siteMetadata.description}
+          />
+          <meta
+            property="og:image"
+            content="/img/woman_hero_social_media_shareimage_1200_628.jpg"
+          />
         </Helmet>
         <Navbar />
         <div>{children}</div>
