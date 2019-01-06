@@ -14,7 +14,6 @@ Before attending graduate school, Kohlmoos gained experience as an art educator 
 
 As an MFA candidate at the School of the Museum of Fine Arts, Boston, Kohlmoos studied painting with Ron Rizzi, Ethan Murrow, and Gerry Bergstein. During her time at SMFA, Kohlmoos was recognized with two Dana Pond Competition Honorable Mentions and a Springborn Fellowship. 
 
-
 ![A cup of tea with a journal and a pen](/img/tea_writing.jpg)
 
 ## Resume
@@ -22,6 +21,7 @@ As an MFA candidate at the School of the Museum of Fine Arts, Boston, Kohlmoos s
 Lives and works in Boston, MA
 
 ### Education
+
 * 2012 MFA (concentration in painting), School of the Museum of Fine Arts, Boston MA
 * 2006 BA in Studio Art, summa cum laude , Lawrence University, Appleton WI
 * 2005 Art History and Italian studies in London and Florence
@@ -29,12 +29,14 @@ Lives and works in Boston, MA
 * Art and Theatre Studies at UW Marathon County, Wausau WI
 
 ### Teaching Experience
+
 * 2012 Private Art Teacher, Boston MA
 * 2008-2009 Private Art Teacher, Lincoln NE
 * 2007-2009 Curriculum Mentor for the Gifted Program, Lincoln Public Schools, Lincoln NE
 * 2006 Art Studio Assistant, Hands On Art Studio, Fish Creek WI
 
 ### Freelance and Collaborative Work
+
 * 2014 Personalized tattoo designs and portraits on commission
 * 2012 Designed the masthead for a cooking blog
 * 2011 Commissioned to produce a logo for Zipline Brewery, Lincoln NE
@@ -49,11 +51,13 @@ Lives and works in Boston, MA
 * Developed marketing materials for two full-length albums
 
 ### Skills
+
 * Fine Arts: Painting (oils, acrylics, watercolors), drawing (graphite, pen and ink, charcoal), illustration
 * Crafts: Sewing, jewelry, collage, calligraphy
 * Computer: Image editing, word processing, internet research, social media marketing
 
 ### Honors and Awards
+
 * 2012 An SMFA nominee for the Joan Mitchell Grant
 * 2012 Dana Pond Competition, Honorable Mention
 * 2010 Winner, Springborn Fellowship
@@ -66,16 +70,17 @@ Lives and works in Boston, MA
 * Departmental Award for significant contribution in Theatre/Drama
 
 ### Exhibitions
-* 2012 Totemic: MFA Thesis Exhibition , Aidekman Arts Center, Tufts University
-* 2011 Museum School Art Sale
-* 2010 Utopalypse , Yes.Oui.Si Gallery group exhibition
-* Museum School Art Sale
-* 2009 Museum School Art Sale
-* Objects of Desire , Haydon Gallery juried exhibition
-* 2008 Cartographic Revolutions , solo show, I & S Studio
+
+* 2019 11:11 The Depth of Perception, national juried group exhibition, Fountain Street Gallery
+* 2015 It's all Personal, group exhibition, Essex Art Center
+* 2012 Totemic: MFA Thesis Exhibition, Aidekman Arts Center, Tufts University
+* 2010 Utopalypse, group exhibition, Yes.Oui.Si Gallery
+* 2008 Objects of Desire, juried exhibition, Haydon Gallery
+* 2008 Cartographic Revolutions, solo show, I & S Studio
 * 2006 Senior Art Exhibition, Wriston Center Galleries, Lawrence University
 
 ### Publications
+
 * 2014 Drawing published in Maisonneuve: A Quarterly of Arts, Opinions, and Ideas. Spring 2014 issue. 
 * 2012 Featured in “Six to Watch,” an annual article about promising MFA grads in The Boston Globe
 * 2009 Two paintings published in Eleven-Eleven: A Journal of Literature and Art , issue 7
