@@ -56,7 +56,14 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "artwork-post" } } }
+      filter: { 
+        frontmatter: { 
+          templateKey: { eq: "artwork-post" } 
+          # TBD - figure out how to query where frontispiece is not null
+          # frontispiece: { ne: null }
+          category: { eq: "Paintings" }
+        } 
+      }
       limit: 1
     ) {
       edges {
